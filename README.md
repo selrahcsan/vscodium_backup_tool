@@ -11,8 +11,6 @@
 
 Codium Backup Tool é um utilitário leve e interativo para salvar e restaurar configurações do VSCodium, com suporte a empacotamento `.deb` e execução via terminal com `codium-bkp`.
 
-Codium Backup Tool is a lightweight interactive utility to backup and restore your VSCodium setup, including `.deb` packaging and terminal launcher `codium-bkp`.
-
 ---
 
 <p align="center">
