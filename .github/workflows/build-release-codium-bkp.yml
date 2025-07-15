@@ -1,0 +1,81 @@
+name: Build and Release Codium Backup Tool
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Git config
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Read and bump version
+        id: version
+        run: |
+          version=$(cat version.txt)
+          echo "Versão atual: $version"
+
+          IFS='.' read -r major minor patch <<< "$version"
+          patch=$((patch + 1))
+          new_version="$major.$minor.$patch"
+          echo $new_version > version.txt
+          echo "NEW_VERSION=$new_version" >> $GITHUB_ENV
+
+          git add version.txt
+          git commit -m "ci: bump version to $new_version"
+          git push
+
+      - name: Build .deb package
+        run: |
+          chmod +x codium-bkp
+
+          mkdir -p codium-bkp-pkg/DEBIAN
+          mkdir -p codium-bkp-pkg/usr/bin
+          mkdir -p codium-bkp-pkg/opt/codium-bkp
+          
+          # Instalar script e arquivos
+          cp codium-bkp codium-bkp-pkg/usr/bin/
+          cp src/vscodium_backup_tool.py codium-bkp-pkg/opt/codium-bkp/
+          cp -r locales codium-bkp-pkg/opt/codium-bkp/
+
+          chmod 755 codium-bkp-pkg/usr/bin/codium-bkp
+
+          # Control file
+          cat <<EOF > codium-bkp-pkg/DEBIAN/control
+          Package: codium-bkp
+          Version: ${{ env.NEW_VERSION }}
+          Section: utils
+          Priority: optional
+          Architecture: all
+          Depends: python3, gettext
+          Maintainer: Charles Santana
+          Description: Ferramenta de backup e restauração do VSCodium com suporte a tradução
+          EOF
+
+          # Build pacote
+          dpkg-deb --build codium-bkp-pkg
+          mv codium-bkp-pkg.deb codium-bkp_${{ env.NEW_VERSION }}.deb
+
+      - name: Create Tag
+        run: |
+          git tag -a "v${{ env.NEW_VERSION }}" -m "Versão v${{ env.NEW_VERSION }}"
+          git push origin "v${{ env.NEW_VERSION }}"
+
+      - name: Release on GitHub
+        uses: ncipollo/release-action@v1
+        with:
+          tag: v${{ env.NEW_VERSION }}
+          name: Codium Backup Tool v${{ env.NEW_VERSION }}
+          artifacts: codium-bkp_${{ env.NEW_VERSION }}.deb
+          token: ${{ secrets.GITHUB_TOKEN }}
