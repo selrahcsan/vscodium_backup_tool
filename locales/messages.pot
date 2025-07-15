@@ -1,0 +1,92 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-15 14:39-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: vscodium_backup_tool.py:27
+msgid "📁 Copying settings..."
+msgstr ""
+
+#: vscodium_backup_tool.py:31
+msgid "🧩 Exporting extension list..."
+msgstr ""
+
+#: vscodium_backup_tool.py:35
+msgid "✅ Backup completed at: {}"
+msgstr ""
+
+#: vscodium_backup_tool.py:40
+msgid "❌ No backups found."
+msgstr ""
+
+#: vscodium_backup_tool.py:43
+msgid ""
+"\n"
+"📦 Available backups:"
+msgstr ""
+
+#: vscodium_backup_tool.py:47
+msgid "Choose the number of the backup to restore: "
+msgstr ""
+
+#: vscodium_backup_tool.py:52
+msgid "❌ Invalid choice."
+msgstr ""
+
+#: vscodium_backup_tool.py:55
+msgid "🔄 Restoring configuration..."
+msgstr ""
+
+#: vscodium_backup_tool.py:62
+msgid "📥 Reinstalling extensions..."
+msgstr ""
+
+#: vscodium_backup_tool.py:67
+msgid "⚠️ No extension list found."
+msgstr ""
+
+#: vscodium_backup_tool.py:69
+msgid "✅ Restore completed!"
+msgstr ""
+
+#: vscodium_backup_tool.py:73
+msgid "=== VSCodium Backup Tool ==="
+msgstr ""
+
+#: vscodium_backup_tool.py:74
+msgid "1. Create backup"
+msgstr ""
+
+#: vscodium_backup_tool.py:75
+msgid "2. Restore backup"
+msgstr ""
+
+#: vscodium_backup_tool.py:76
+msgid "3. Exit"
+msgstr ""
+
+#: vscodium_backup_tool.py:78
+msgid "Choose an option: "
+msgstr ""
+
+#: vscodium_backup_tool.py:84
+msgid "👋 Exiting..."
+msgstr ""
+
+#: vscodium_backup_tool.py:87
+msgid "❌ Invalid option!"
+msgstr ""
