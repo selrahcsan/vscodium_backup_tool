@@ -1,2 +1,2 @@
 #!/bin/bash
-exec python3 /opt/vscodium-bkp/vscodium_backup_tool.py "$@"
+exec python3 /opt/codium-bkp/vscodium_backup_tool.py "$@"
