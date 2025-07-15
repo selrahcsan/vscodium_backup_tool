@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# FIRST AUTHOR <charlesstna@proton.me>, 2025.
 #
 #, fuzzy
 msgid ""
@@ -10,8 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-07-15 14:39-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"Last-Translator: Charles Santana <charlesstna@proton.me>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,74 +18,76 @@ msgstr ""
 
 #: vscodium_backup_tool.py:27
 msgid "📁 Copying settings..."
-msgstr ""
+msgstr "📁 Copiando configurações..."
 
 #: vscodium_backup_tool.py:31
 msgid "🧩 Exporting extension list..."
-msgstr ""
+msgstr "🧩 Exportando lista de extensões..."
 
 #: vscodium_backup_tool.py:35
 msgid "✅ Backup completed at: {}"
-msgstr ""
+msgstr "✅ Backup concluído em: {}"
 
 #: vscodium_backup_tool.py:40
 msgid "❌ No backups found."
-msgstr ""
+msgstr "❌ Nenhum backup encontrado."
 
 #: vscodium_backup_tool.py:43
 msgid ""
 "\n"
 "📦 Available backups:"
 msgstr ""
+"\n"
+"📦 Backups disponíveis:"
 
 #: vscodium_backup_tool.py:47
 msgid "Choose the number of the backup to restore: "
-msgstr ""
+msgstr "Escolha o número do backup para restaurar: "
 
 #: vscodium_backup_tool.py:52
 msgid "❌ Invalid choice."
-msgstr ""
+msgstr "❌ Escolha inválida."
 
 #: vscodium_backup_tool.py:55
 msgid "🔄 Restoring configuration..."
-msgstr ""
+msgstr "🔄 Restaurando configurações..."
 
 #: vscodium_backup_tool.py:62
 msgid "📥 Reinstalling extensions..."
-msgstr ""
+msgstr "📥 Reinstalando extensões..."
 
 #: vscodium_backup_tool.py:67
 msgid "⚠️ No extension list found."
-msgstr ""
+msgstr "⚠️ Nenhuma lista de extensões encontrada."
 
 #: vscodium_backup_tool.py:69
 msgid "✅ Restore completed!"
-msgstr ""
+msgstr "✅ Restauração concluída!"
 
 #: vscodium_backup_tool.py:73
 msgid "=== VSCodium Backup Tool ==="
-msgstr ""
+msgstr "=== Ferramenta de Backup do VSCodium ==="
 
 #: vscodium_backup_tool.py:74
 msgid "1. Create backup"
-msgstr ""
+msgstr "1. Fazer backup"
 
 #: vscodium_backup_tool.py:75
 msgid "2. Restore backup"
-msgstr ""
+msgstr "2. Restaurar backup"
 
 #: vscodium_backup_tool.py:76
 msgid "3. Exit"
-msgstr ""
+msgstr "3. Sair"
 
 #: vscodium_backup_tool.py:78
 msgid "Choose an option: "
-msgstr ""
+msgstr "Escolha uma opção: "
 
 #: vscodium_backup_tool.py:84
 msgid "👋 Exiting..."
-msgstr ""
+msgstr "👋 Saindo..."
 
 #: vscodium_backup_tool.py:87
 msgid "❌ Invalid option!"
-msgstr ""
+msgstr "❌ Opção inválida!"
